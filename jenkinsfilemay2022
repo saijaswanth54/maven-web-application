@@ -5,6 +5,7 @@
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM(ignorePostCommitHooks: true, scmpoll_spec: ' * * * * *')])])
     echo "the job name is: ${env.JOB_NAME}"
     try{
+    slacknotification("STARTED")
     stage('checkoutcode'){
     git branch: 'development', credentialsId: '**/maven-web-application.war', url:     'https://github.com/saijaswanth54/maven-web-application.git'
     }
