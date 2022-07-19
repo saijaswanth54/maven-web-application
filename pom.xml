@@ -16,6 +16,7 @@
 		<url>http://mithuntechnologies.com/</url>
 	</organization>
 
+<!---
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<spring.version>5.1.2.RELEASE</spring.version>
@@ -24,10 +25,15 @@
 		<sonar.host.url>http://15.206.149.42:8081/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password> 
+		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
+  ---->
+	 <properties>
+        <sonar.sources>src/main/java,src/main/webapp</sonar.sources>
+      </properties>
 
 	<dependencies>
 		
